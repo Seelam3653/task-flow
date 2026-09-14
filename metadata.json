@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow – Smart Daily Task Manager",
+  "description": "Production-ready smart daily task manager, habit tracker, and productivity suite designed for low-cost scalability and Google Play Store readiness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
