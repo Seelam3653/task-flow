@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, ShieldCheck, Zap, Sparkles, Database, Bell, Lock, Crown, GitBranch, Activity, Rocket, Smartphone } from 'lucide-react';
+import { Layers, ShieldCheck, Zap, Sparkles, Database, Bell, Lock, Crown, GitBranch, Activity, Rocket, Smartphone, SmartphoneNfc, Laptop } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -8,23 +8,9 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   const tabs = [
-    { id: 'architecture', label: '1. Product Architecture', icon: Layers },
-    { id: 'supabase', label: '2. Supabase & RLS (Phase 2)', icon: ShieldCheck },
-    { id: 'core-tasks', label: '3. Core Tasks & Flutter (Phase 3)', icon: Layers },
-    { id: 'habits-focus', label: '4. Habits & Pomodoro (Phase 4)', icon: Sparkles },
-    { id: 'analytics-ai', label: '5. Analytics & AI (Phase 5)', icon: Zap },
-    { id: 'offline-sync', label: '6. Offline Storage & Sync (Phase 6)', icon: Database },
-    { id: 'notifications', label: '7. Notifications & Alarms (Phase 7)', icon: Bell },
-    { id: 'auth-session', label: '8. Auth & Security (Phase 8)', icon: Lock },
-    { id: 'subscriptions', label: '9. Subscriptions & IAP (Phase 9)', icon: Crown },
-    { id: 'cicd', label: '10. CI/CD & Fastlane (Phase 10)', icon: GitBranch },
-    { id: 'performance', label: '11. Performance & Profiling (Phase 11)', icon: Activity },
-    { id: 'launch', label: '12. Launch & Store Telemetry (Phase 12)', icon: Rocket },
-    { id: 'google-play', label: '🎯 Target 1: Google Play Launch Hub', icon: Smartphone },
-    { id: 'database', label: '13. Database ER Design', icon: Layers },
-    { id: 'monetization', label: '14. Monetization & Costs', icon: Zap },
-    { id: 'design-system', label: '15. Material 3 Design', icon: Sparkles },
-    { id: 'roadmap', label: '16. 12-Phase Roadmap', icon: Layers },
+    { id: 'mobile-app', label: '📱 Live App UI', icon: SmartphoneNfc },
+    { id: 'local-setup', label: '💻 Flutter App Code (main.dart)', icon: Laptop },
+    { id: 'google-play', label: '🎯 Google Play Publishing Hub', icon: Smartphone },
   ];
 
   return (
