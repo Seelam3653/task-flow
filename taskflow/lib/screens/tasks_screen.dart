@@ -130,6 +130,7 @@ class TasksScreen extends StatelessWidget {
     );
 
     Future.delayed(const Duration(milliseconds: 700), () {
+      if (!context.mounted) return;
       Navigator.pop(context);
       task.subtasks.addAll([
         SubTask(id: '${task.id}-1', title: 'Identify core scope & dependencies'),
@@ -137,6 +138,7 @@ class TasksScreen extends StatelessWidget {
         SubTask(id: '${task.id}-3', title: 'Final test & verification'),
       ]);
       onUpdate();
+      if (!context.mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('✨ Added AI subtasks to "${task.title}"!'),
