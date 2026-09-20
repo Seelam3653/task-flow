@@ -22,8 +22,10 @@ class TaskFlowApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: 'Roboto',
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF4F46E5),
+          primary: const Color(0xFF4F46E5),
           brightness: Brightness.light,
         ),
         scaffoldBackgroundColor: const Color(0xFFF8FAFC),
@@ -31,7 +33,7 @@ class TaskFlowApp extends StatelessWidget {
           elevation: 0,
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(16)),
+            borderRadius: BorderRadius.all(Radius.circular(14)),
             side: BorderSide(color: Color(0xFFE2E8F0)),
           ),
         ),

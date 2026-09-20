@@ -164,6 +164,20 @@ export const LocalSetupGuideTab: React.FC = () => {
       {/* SUBTAB 1: WALKTHROUGH */}
       {activeSubtab === 'walkthrough' && (
         <div className="space-y-4">
+          <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl text-blue-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+            <div>
+              <div className="font-bold text-sm text-blue-900 flex items-center gap-1.5">
+                <span>⚡ Production Modular Architecture Walkthrough</span>
+              </div>
+              <p className="text-xs text-blue-700 mt-0.5">
+                Follow these commands to build and run the offline-first TaskFlow app with <code>shared_preferences ^2.5.5</code>.
+              </p>
+            </div>
+            <div className="text-xs bg-white/80 px-3 py-1.5 rounded-lg border border-blue-200 font-mono text-blue-800 font-semibold shrink-0">
+              Target ID: com.taskflow.app
+            </div>
+          </div>
+
           {localExecutionSteps.map((stepItem) => (
             <div key={stepItem.step} className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs space-y-3">
               <div className="flex items-center justify-between">

@@ -5,8 +5,8 @@ import '../models/habit_item.dart';
 
 class StorageService {
   final SharedPreferences prefs;
-  static const String _tasksKey = 'taskflow_tasks_v1';
-  static const String _habitsKey = 'taskflow_habits_v1';
+  static const String _tasksKey = 'taskflow_tasks_v2';
+  static const String _habitsKey = 'taskflow_habits_v2';
 
   StorageService({required this.prefs});
 
@@ -46,28 +46,47 @@ class StorageService {
     return [
       TaskItem(
         id: '1',
-        title: 'Review Google Play Store Copy',
+        title: 'Finalize Google Play Store Listing Copy',
         priority: 'Urgent',
         dueDate: 'Today, 5:00 PM',
         subtasks: [
-          SubTask(id: '1-1', title: 'Check short description limit (80 chars)', isCompleted: true),
-          SubTask(id: '1-2', title: 'Verify Data Safety questionnaire answers', isCompleted: false),
+          SubTask(id: '1-1', title: 'Write 80-char short description', isCompleted: true),
+          SubTask(id: '1-2', title: 'Format feature bullets with emojis', isCompleted: true),
+          SubTask(id: '1-3', title: 'Draft Data Safety policy answers', isCompleted: false),
         ],
       ),
       TaskItem(
         id: '2',
-        title: 'Build Release App Bundle (AAB)',
+        title: 'Review Supabase Database Migrations',
         priority: 'High',
         dueDate: 'Tomorrow',
+        subtasks: [
+          SubTask(id: '2-1', title: 'Verify RLS multi-tenant policies', isCompleted: true),
+          SubTask(id: '2-2', title: 'Run seed script for test user', isCompleted: false),
+        ],
+      ),
+      TaskItem(
+        id: '3',
+        title: 'Configure RevenueCat Entitlements',
+        priority: 'Medium',
+        dueDate: 'Sep 16',
+        isCompleted: true,
+      ),
+      TaskItem(
+        id: '4',
+        title: 'Prepare 1024x500 Feature Graphic',
+        priority: 'Low',
+        dueDate: 'Sep 18',
       ),
     ];
   }
 
   List<HabitItem> _getDefaultHabits() {
     return [
-      HabitItem(id: 'h1', title: 'Deep Work (2 Pomodoros)', icon: '⚡', streak: 12, isCompletedToday: true),
-      HabitItem(id: 'h2', title: 'Read 20 pages', icon: '📚', streak: 5, isCompletedToday: false),
-      HabitItem(id: 'h3', title: 'Post-work 30m Walk', icon: '🚶‍♂️', streak: 19, isCompletedToday: true),
+      HabitItem(id: 'h1', title: 'Deep Work (2 Pomodoros)', icon: '⚡', streak: 12, isCompletedToday: true, targetDays: 'Daily'),
+      HabitItem(id: 'h2', title: 'Read 20 pages (Design Systems)', icon: '📚', streak: 5, isCompletedToday: false, targetDays: 'Daily'),
+      HabitItem(id: 'h3', title: 'Zero Inbox Task Review', icon: '📥', streak: 8, isCompletedToday: false, targetDays: 'Weekdays'),
+      HabitItem(id: 'h4', title: 'Post-work 30m Walk', icon: '🚶‍♂️', streak: 19, isCompletedToday: true, targetDays: 'Daily'),
     ];
   }
 }
